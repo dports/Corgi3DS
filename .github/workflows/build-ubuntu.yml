@@ -1,0 +1,37 @@
+name: CMake Build (Ubuntu x86-64)
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies
+      run: |
+        sudo rm -f /etc/apt/sources.list.d/dotnetdev.list /etc/apt/sources.list.d/microsoft-prod.list
+        sudo apt update
+        sudo apt install cmake qt5-default qtmultimedia5-dev libgmp-dev --allow-downgrades -y
+    - name: Create build environment
+      run: mkdir ${{runner.workspace}}/build
+    - name: Configure
+      working-directory: ${{runner.workspace}}/build
+      run: cmake $GITHUB_WORKSPACE
+    - name: Make
+      working-directory: ${{runner.workspace}}/build
+      run: |
+        make -j$(nproc --all)
+        mkdir dist
+        cp Corgi3DS dist
+    - uses: actions/upload-artifact@v1
+      with:
+        name: Corgi3DS
+        path: ${{runner.workspace}}/build/dist
