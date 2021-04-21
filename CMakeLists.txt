@@ -109,4 +109,5 @@ set(HEADERS
 )
 
 add_executable(${PROJECT} ${SOURCES} ${HEADERS} ${MOC})
-target_link_libraries(${PROJECT} Qt5::Core Qt5::Gui Qt5::Multimedia Qt5::Widgets gmpxx gmp)
+#target_link_libraries(${PROJECT} Qt5::Core Qt5::Gui Qt5::Multimedia Qt5::Widgets gmpxx gmp )
+add_library(${PROJECT} Qt5::Core Qt5::Gui Qt5::Multimedia Qt5::Widgets gmpxx gmp )
