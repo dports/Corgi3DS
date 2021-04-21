@@ -16,9 +16,9 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-SET (CMAKE_C_FLAGS "-nostdlib -nostartfiles -nodefaultlibs -c")
-SET (CMAKE_CXX_FLAGS "-nostdlib -nostartfiles -nodefaultlibs -c")
-SET (CMAKE_EXE_LINKER_FLAGS "-nostdlib -nostartfiles -nodefaultlibs -c")
+SET (CMAKE_C_FLAGS "-nostdlib -nostartfiles -nodefaultlibs")
+SET (CMAKE_CXX_FLAGS "-nostdlib -nostartfiles -nodefaultlibs")
+SET (CMAKE_EXE_LINKER_FLAGS "-nostdlib -nostartfiles -nodefaultlibs")
 
 add_compile_options(-Wall -Wextra -Werror)
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
