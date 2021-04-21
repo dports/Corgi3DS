@@ -12,7 +12,7 @@ add_compile_options(-Wall -Wextra)
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
 
 # find Qt
-find_package(Qt5 REQUIRED COMPONENTS Core Gui Multimedia Widgets)
+find_package(Qt5 REQUIRED COMPONENTS Core Gui Multimedia Widgets gmpxx gmp stdc++ gcc_s_seh)
 
 set(SOURCES
     src/qt/main.cpp
@@ -109,5 +109,4 @@ set(HEADERS
 )
 
 add_executable(${PROJECT} ${SOURCES} ${HEADERS} ${MOC})
-#target_link_libraries(${PROJECT} Qt5::Core Qt5::Gui Qt5::Multimedia Qt5::Widgets gmpxx gmp )
-add_library(Qt5::Core Qt5::Gui Qt5::Multimedia Qt5::Widgets gmpxx gmp stdc++ gcc_s_seh)
+target_link_libraries(${PROJECT} Qt5::Core Qt5::Gui Qt5::Multimedia Qt5::Widgets gmpxx gmp stdc++ gcc_s_seh)
