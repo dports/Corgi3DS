@@ -10,7 +10,8 @@ endif()
 
 set(CMAKE_OSX_DEPLOYMENT_TARGET "10.14" CACHE STRING "Minimum OS X deployment version")
 
-project(Corgi3DS CXX)
+set(PROJECT Corgi3DS)
+project(${PROJECT} CXX)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14) # 17
