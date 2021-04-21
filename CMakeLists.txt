@@ -6,7 +6,7 @@ include(CheckLibraryExists)
 set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15" CACHE STRING "Minimum OS X deployment version")
 
 set(PROJECT Corgi3DS)
-project(${PROJECT} CXX)
+project(${PROJECT})
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)
