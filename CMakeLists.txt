@@ -16,9 +16,9 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-SET (CMAKE_C_FLAGS " --entry main -lc ")
-SET (CMAKE_CXX_FLAGS " --entry main -lc ")
-SET (CMAKE_EXE_LINKER_FLAGS " --entry main -lc ")
+SET (CMAKE_C_FLAGS " --entry main ")
+SET (CMAKE_CXX_FLAGS " --entry main ")
+SET (CMAKE_EXE_LINKER_FLAGS " --entry main ")
 
 add_compile_options(-Wall -Wextra)
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
@@ -175,11 +175,6 @@ set(HEADERS
     src/qt/settings.hpp
     src/qt/settingswindow.hpp
 )
-
-if (APPLE)
-        target_include_directories(${PROJECT} PUBLIC /usr/local/include /opt/homebrew/include)
-        target_link_directories(${PROJECT} PUBLIC /usr/local/lib /opt/homebrew/lib)
-endif()
 
 add_executable(${PROJECT} ${SOURCES} ${HEADERS} ${MOC})
 target_link_libraries(${PROJECT} Qt5::Core Qt5::Gui Qt5::Multimedia Qt5::Widgets gmpxx gmp )
