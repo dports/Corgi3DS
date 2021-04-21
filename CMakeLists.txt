@@ -1,12 +1,7 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.20.1)
 
 include(CheckSymbolExists)
 include(CheckLibraryExists)
-
-cmake_policy(VERSION 3.13)
-if (POLICY CMP0076)
-    cmake_policy(SET CMP0076 NEW)
-endif()
 
 set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15" CACHE STRING "Minimum OS X deployment version")
 
