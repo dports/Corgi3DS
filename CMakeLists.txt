@@ -21,7 +21,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-add_compile_options(-Wall -Wextra -c)
+add_compile_options(-Wall -Wextra -c -nostartfiles)
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
 
 # find Qt
