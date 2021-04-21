@@ -81,9 +81,6 @@ if (BUILD_STATIC AND WIN32)
     set(CMAKE_FIND_LIBRARY_SUFFIXES .a)
 endif()
 
-add_executable(${PROJECT} ${SOURCES} ${HEADERS} ${MOC})
-target_link_libraries(${PROJECT} Qt5::Core Qt5::Gui Qt5::Multimedia Qt5::Widgets gmpxx gmp )
-
 set(SOURCES
     src/qt/main.cpp
     src/core/emulator.cpp
@@ -183,3 +180,6 @@ if (APPLE)
         target_include_directories(${PROJECT} PUBLIC /usr/local/include /opt/homebrew/include)
         target_link_directories(${PROJECT} PUBLIC /usr/local/lib /opt/homebrew/lib)
 endif()
+
+add_executable(${PROJECT} ${SOURCES} ${HEADERS} ${MOC})
+target_link_libraries(${PROJECT} Qt5::Core Qt5::Gui Qt5::Multimedia Qt5::Widgets gmpxx gmp )
