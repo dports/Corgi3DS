@@ -96,11 +96,11 @@ set(SOURCES
     src/core/pxi.cpp
     src/core/arm11/mpcore_pmr.cpp
     src/core/arm11/gpu.cpp
-    #src/core/arm9/aes.cpp
+    src/core/arm9/aes.cpp
     src/core/arm9/sha.cpp
     src/core/common/bswp.cpp
     src/core/common/rotr.cpp
-    #src/core/arm9/aes_lib.c
+    src/core/arm9/aes_lib.c
     src/core/arm9/emmc.cpp
     src/core/arm9/interrupt9.cpp
     src/qt/emuwindow.cpp
@@ -126,7 +126,7 @@ set(SOURCES
     src/core/arm11/xtensa_interpreter.cpp
     src/core/arm11/wifi_timers.cpp
     src/core/spi.cpp
-	src/tinyAESc/aes.c
+	#src/tinyAESc/aes.c
 )
 
 set(HEADERS
@@ -142,11 +142,11 @@ set(HEADERS
     src/core/pxi.hpp
     src/core/arm11/mpcore_pmr.hpp
     src/core/arm11/gpu.hpp
-    #src/core/arm9/aes.hpp
+    src/core/arm9/aes.hpp
     src/core/arm9/sha.hpp
     src/core/common/bswp.hpp
-    #src/core/arm9/aes_lib.hpp
-    #src/core/arm9/aes_lib.h
+    src/core/arm9/aes_lib.hpp
+    src/core/arm9/aes_lib.h
     src/core/arm9/emmc.hpp
     src/core/arm9/interrupt9.hpp
     src/core/i2c.hpp
