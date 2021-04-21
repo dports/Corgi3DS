@@ -130,7 +130,7 @@ set(SOURCES
     src/core/arm11/xtensa_interpreter.cpp
     src/core/arm11/wifi_timers.cpp
     src/core/spi.cpp
-	src/tiny-AES-c/aes.c
+	src/tinyAESc/aes.c
 )
 
 set(HEADERS

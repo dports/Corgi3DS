@@ -24,11 +24,9 @@ SOURCES += src/qt/main.cpp \
     src/core/pxi.cpp \
     src/core/arm11/mpcore_pmr.cpp \
     src/core/arm11/gpu.cpp \
-    src/core/arm9/aes.cpp \
     src/core/arm9/sha.cpp \
     src/core/common/bswp.cpp \
     src/core/common/rotr.cpp \
-    src/core/arm9/aes_lib.c \
     src/core/arm9/emmc.cpp \
     src/core/arm9/interrupt9.cpp \
     src/qt/emuwindow.cpp \
@@ -53,7 +51,8 @@ SOURCES += src/qt/main.cpp \
     src/core/spi.cpp \
     src/qt/settingswindow.cpp \
     src/qt/settings.cpp \
-    src/qt/emuthread.cpp
+    src/qt/emuthread.cpp \
+	src/tinyAESc/aes.c
 
 HEADERS += \
     src/core/emulator.hpp \
@@ -68,11 +67,8 @@ HEADERS += \
     src/core/pxi.hpp \
     src/core/arm11/mpcore_pmr.hpp \
     src/core/arm11/gpu.hpp \
-    src/core/arm9/aes.hpp \
     src/core/arm9/sha.hpp \
     src/core/common/bswp.hpp \
-    src/core/arm9/aes_lib.hpp \
-    src/core/arm9/aes_lib.h \
     src/core/arm9/emmc.hpp \
     src/core/arm9/interrupt9.hpp \
     src/qt/emuwindow.hpp \
