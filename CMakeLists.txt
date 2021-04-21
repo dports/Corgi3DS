@@ -115,14 +115,6 @@ if (ENABLE_LTO)
 	endif()
 endif()
 
-option(BUILD_QT_SDL "Build Qt/SDL frontend" ON)
-
-add_subdirectory(src)
-
-if (BUILD_QT_SDL)
-	add_subdirectory(src/frontend/qt_sdl)
-endif()
-
 set(SOURCES
     src/qt/main.cpp
     src/core/emulator.cpp
