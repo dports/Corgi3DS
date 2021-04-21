@@ -13,16 +13,16 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15" CACHE STRING "Minimum OS X deployment ve
 set(PROJECT Corgi3DS)
 project(${PROJECT} CXX)
 
-set(CMAKE_C_STANDARD 11)
+#set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
-set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOMOC OFF)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-add_compile_options(-Wall -Wextra -c -nostartfiles)
-set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
+add_compile_options(-Wall -Wextra -c)
+#set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
 
 # find Qt
 find_package(Qt5 REQUIRED COMPONENTS Core Gui Multimedia Widgets )
@@ -66,7 +66,7 @@ if (ENABLE_JIT)
 endif()
 
 if (CMAKE_BUILD_TYPE STREQUAL Debug)
-	add_compile_options(-Og)
+	add_compile_options(-Og -DNDEBUG)
 endif()
 
 if (CMAKE_BUILD_TYPE STREQUAL Release)
