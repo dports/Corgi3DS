@@ -8,7 +8,7 @@ if (POLICY CMP0076)
     cmake_policy(SET CMP0076 NEW)
 endif()
 
-set(CMAKE_OSX_DEPLOYMENT_TARGET "10.14" CACHE STRING "Minimum OS X deployment version")
+set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15" CACHE STRING "Minimum OS X deployment version")
 
 set(PROJECT Corgi3DS)
 project(${PROJECT} CXX)
@@ -21,7 +21,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-add_compile_options(-Wall -Wextra)
+add_compile_options(-Wall -Wextra -c)
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
 
 # find Qt
